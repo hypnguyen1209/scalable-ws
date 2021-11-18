@@ -1,0 +1,26 @@
+version : '3'
+
+services:
+    lb:
+        image: haproxy
+        ports:
+            - "8080:8080"
+        volumes:
+            - ./lb:/usr/local/etc/haproxy
+    ws1:
+        image: app
+        environment:
+            - APPID=1111
+            - APPPORT=8080
+            - REDIS_HOST=rds
+            - REDIS_PORT=6379
+
+    ws2:
+        image: app
+        environment:
+            - APPID=2222
+            - APPPORT=8080
+            - REDIS_HOST=rds
+            - REDIS_PORT=6379
+    redis:
+        image: redis
