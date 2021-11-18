@@ -10,16 +10,16 @@ services:
     ws1:
         image: app
         environment:
-            - APPID=1111
-            - APPPORT=8080
+            - APPID=1
+            - PORT=8080
             - REDIS_HOST=rds
             - REDIS_PORT=6379
 
     ws2:
         image: app
         environment:
-            - APPID=2222
-            - APPPORT=8080
+            - APPID=2
+            - PORT=8080
             - REDIS_HOST=rds
             - REDIS_PORT=6379
     redis:
