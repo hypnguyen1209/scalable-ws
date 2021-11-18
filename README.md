@@ -1,6 +1,6 @@
 # scalable-ws
 
-Scalable websockets in Go Lang using Redis
+Scalable websockets in Golang using Redis
 
 ```sh
 docker-compose up -d
